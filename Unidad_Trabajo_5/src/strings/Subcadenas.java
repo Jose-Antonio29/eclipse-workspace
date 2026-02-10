@@ -1,0 +1,27 @@
+package strings;
+
+import java.util.Scanner;
+
+public class Subcadenas {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		// 1. Pedimos al usuario que introduzca una cadena de caracteres
+		System.out.print("Introduce la cadena: ");
+		String cadena = sc.nextLine().trim();
+		
+		// 2. Pedimos al usuario que introduzca una subacadena de caracteres
+		System.out.print("Introduce la subcadena: ");
+		String subcadena = sc.nextLine().trim();
+		
+		sc.close();
+
+		// 3. Indicamos si la subcadena introducida forma parte de la original
+		if (cadena.indexOf(subcadena)==-1) 
+			System.out.println("No hemos encontrado la subcadena '"+subcadena+"' dentro de la cadena original");
+		else
+			System.out.println("La subcadena '"+subcadena+"' se encuentra en la cadena original");
+	}
+
+}

@@ -1,0 +1,53 @@
+package strings;
+
+import java.util.Scanner;
+
+public class EjemplosString {
+
+	public static void main(String[] args) {
+		// 1. Pedimos al usuario que introduzca su nombre
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Dime tu nombre: ");
+		String nombre = sc.nextLine().trim();
+		sc.close();
+		
+		// 2. Mostramos el nombre por pantalla
+		System.out.println("Nombre: "+nombre);
+		
+		// 3. Mostramos la longitud del nombre
+		System.out.println("Longitud: "+nombre.length());
+		
+		// 4. Mostramos el nombre escrito con mayúsculas
+		System.out.println("En mayúsculas: "+nombre.toUpperCase());
+		
+		// 5. Mostramos la inicial del nombre
+		System.out.println("Inicial: "+nombre.charAt(0));
+		
+		// 6. Mostramos el último carácter del nombre
+		System.out.println("Final: "+nombre.charAt(nombre.length()-1));
+		
+		// 7. Mostramos el nombre intercalando espacios en blanco
+		System.out.print("Espaciado: ");
+		for (int i=0; i<nombre.length(); i++)
+			System.out.print(nombre.charAt(i)+" ");
+		
+		// 8. Mostramos el nombre al revés
+		System.out.print("\nDel revés: ");
+		for (int i=nombre.length()-1; i>=0; i--) 
+			System.out.print(nombre.charAt(i));
+		
+		// 9. Mostramos solo las vocales
+		System.out.print("\nVocales: ");
+		char c;
+		for (int i=0; i<nombre.length(); i++) {
+			c = nombre.toLowerCase().charAt(i);
+			if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u' ||
+				c=='á' || c=='é' || c=='í' || c=='ó' || c=='ú'	) 
+				System.out.print(nombre.charAt(i)+" ");
+		}
+		
+		
+			
+
+	}
+}

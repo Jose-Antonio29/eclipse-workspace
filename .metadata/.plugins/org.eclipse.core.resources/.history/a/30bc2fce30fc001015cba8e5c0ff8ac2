@@ -1,0 +1,14 @@
+package matrices.ejercicios;
+
+public class Ejercico2 {
+
+	public static void main(String[] args) {
+		int [][] marco = new int[8][6];
+		
+		for (int i=0; i<marco.length; i++) {
+			
+		}
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package strings;
+
+import java.util.Scanner;
+
+public class EjercicioString1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduce tu nombre: ");
+		String cadena = sc.nextLine();
+		sc.close();
+		StringBuffer cadenaConvertida = new StringBuffer(cadena);
+		cadenaConvertida.reverse();
+		
+		System.out.println("Nombre: "+cadena);
+		System.out.println("Nombre invertido: "+cadenaConvertida);
+
+	}
+
+}

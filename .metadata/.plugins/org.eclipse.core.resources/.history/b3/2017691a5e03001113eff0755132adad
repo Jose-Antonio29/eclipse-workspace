@@ -1,0 +1,12 @@
+package strings;
+
+public class StringBufferTest {
+
+	public static void main(String[] args) {
+		// Ejemplo con StringBuffer
+		StringBuffer nombre = new StringBuffer("Hermione Granger");
+		System.out.println(nombre);
+
+	}
+
+}

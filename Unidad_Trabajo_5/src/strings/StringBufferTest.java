@@ -1,0 +1,21 @@
+package strings;
+
+public class StringBufferTest {
+
+	public static void main(String[] args) {
+		// Ejemplo con StringBuffer
+		StringBuffer nombre = new StringBuffer("Hermione Granger");
+		System.out.println(nombre);
+		nombre.reverse();
+		System.out.println(nombre);
+		
+		String nombre2 = nombre.reverse().toString();
+		System.out.println(nombre2);
+		
+		StringBuffer nombre3 = new StringBuffer(nombre2.substring(0,8).toUpperCase());
+		nombre3.reverse();
+		System.out.println(nombre3);
+		
+	}
+
+}

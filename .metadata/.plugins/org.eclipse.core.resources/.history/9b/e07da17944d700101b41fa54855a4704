@@ -1,0 +1,137 @@
+package ejemplos.fecha;
+
+public class Fecha {
+	
+	// Atributos
+	private int Day;
+	private int Month;
+	private int Year;
+	
+	/**
+	 * Constructor
+	 */
+	public Fecha() {
+		this.Day=1;
+		this.Month=1;
+		this.Year=1;
+	}
+	
+	
+	/**
+	 * Constructor
+	 * @param day
+	 * @param month
+	 * @param year
+	 */
+	public Fecha(int day, int month, int year) {
+		Day = day;
+		Month = month;
+		Year = year;
+	}
+
+
+	/**
+	 * Devuelve el valor del día
+	 * @return El valor del día
+	 */
+	public int getDay() {
+		return Day;
+	}
+
+
+	/**
+	 * Devuelve el valor del mes
+	 * @return El valor del mes
+	 */
+	public int getMonth() {
+		return Month;
+	}
+
+
+	/**
+	 * Devuelve el valor del año
+	 * @return El valor del año
+	 */
+	public int getYear() {
+		return Year;
+	}
+
+
+	/**
+	 * Estalece el valor del día
+	 * @param day El valor a establecer para Day (int)
+	 */
+	public void setDay(int day) {
+		Day = day;
+	}
+
+
+	/**
+	 * Establece el valor del mes
+	 * @param month El valor a establecer para Month (int)
+	 */
+	public void setMonth(int month) {
+		Month = month;
+	}
+
+
+	/**
+	 * Establece el valor del año
+	 * @param year El valor a establecer para Year
+	 */
+	public void setYear(int year) {
+		Year = year;
+	}
+	
+	/**
+	 * Función que comprueba si la fecha es válida
+	 * @return FALSE si no es válida, TRUE si es válida
+	 */
+	public boolean isValid() {
+		
+		if (Month<1 || Month>12) {
+			return false;
+		}
+		
+		int nd=31;		// Número de días en un mes
+
+		if (Month==4 || Month==6 || Month==9 || Month==11) {
+			nd=30;
+		}
+		
+		if (Month==2) {
+			nd=28;
+		}
+		
+		if (Day<1 || Day>nd) {
+			return false;
+		}
+		
+		if (Year==0) {
+			return false;
+		}
+		
+		return true;
+	}
+
+	/**
+	 * Función que convierte una fecha al formata dd/mm/a
+	 */
+	@Override
+	public String toString() {
+		String fecha="";
+		if (Day<10)
+			fecha+="0";
+		fecha+=Day+"/";
+		
+		if (Month<10)
+			fecha+="0";
+		fecha+=Month+"/";
+		
+		fecha+=Year;
+		if (Year<0) 
+		 fecha+="A.C.";
+		
+		return fecha;
+	}
+}

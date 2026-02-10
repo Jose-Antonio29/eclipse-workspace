@@ -1,0 +1,48 @@
+package strings;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+// Haz una función que reciba como parámetro una cadena de caracteres y devuelve la posición 
+// en la que haya un espacio en blanco, en caso de que no tenga, devuelve el -1
+
+public class Ejercicio1_V2 {
+	
+	/**
+	 * Función que devuelve la posición del primer espacio en blanco que contiene cadena
+	 * en caso de que cadena no tenga un espacio en blanco, devuelve -1
+	 * @param cadena - Un string
+	 * @return La posición del primer espacio en blanco encontrado o -1 si no hay ningún espacio en blanco
+	 */
+	public static int blanco (String cadena) {
+		for (int i=0; i<cadena.length(); i++) {
+			if (cadena.charAt(i)==' ') {
+				return i;
+			}
+		}		
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.print("Introduce tu nombre: ");
+			String cadena = sc.nextLine();
+			
+			if (blanco(cadena)!=-1) {
+				System.out.println("Nombre: "+cadena.substring(0,blanco(cadena)));
+				System.out.println("Apellido: "+cadena.substring(blanco(cadena)));
+			} else {
+				System.out.println("Nombre: "+cadena);
+			}
+			
+		} catch (InputMismatchException ime) {
+			System.err.println(">> ERROR: El tipo de dato introducido no es correcto.");
+		} finally {
+			sc.close();
+		}
+
+	}
+
+}

@@ -1,0 +1,42 @@
+package repaso;
+
+import java.util.Scanner;
+
+public class MiNombre {
+	
+	/**
+	 * Procedimiento que invierte una cadena de caracteres, es decir, del último al primer carácter
+	 * @param s - Cadena a invertir
+	 */
+	private static String invertir (String s) {
+		return new StringBuffer(s).reverse().toString();		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		// Pedimos al usuario que introduzca su nombre
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduce tu nombre: ");
+		String nombre = sc.nextLine();
+		sc.close();
+		
+		// Imprimir nombre
+		System.out.println("Nombre: "+nombre);
+		
+		// En mayúsculas
+		System.out.println("En mayúsculas: "+nombre.toUpperCase());
+		
+		// En minúsculas
+		System.out.println("En minúsculas: "+nombre.toLowerCase());
+		
+		// Invertido
+		System.out.print("Invertido: ");
+		invertir(nombre);
+		
+		// Imprimir vocales
+		System.out.println();
+
+	}
+
+}

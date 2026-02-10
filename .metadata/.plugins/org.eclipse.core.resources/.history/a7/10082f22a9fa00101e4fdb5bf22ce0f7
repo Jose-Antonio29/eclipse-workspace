@@ -1,0 +1,49 @@
+package matrices.ejemplos;
+
+public class EjMatriz03 {
+	
+	/**
+	 * Procedimiento que muestra por pantalla los valores almacenados en una matriz
+	 * @param M - Una matriz de números enteros
+	 */
+	public static void mostrarMatriz (int[][] M) {
+		for (int i=0; i<M.length; i++) {
+			for (int j=0; j<M[i].length; j++) {
+				System.out.print(M[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	final static int TAM = 3;
+
+	public static void main(String[] args) {
+		int[][] matriz = new int[TAM][TAM];
+		
+		System.out.println("Matriz inicial: ");
+		mostrarMatriz(matriz);
+		
+		// Vamos a incrementar en una unidad cada valor almacenado en la matriz
+		for (int i=0; i<matriz.length; i++) {
+			for (int j=0; j<matriz[i].length; j++) {
+				matriz[i][j]++;
+			}
+		}
+
+		// Mostramos por pantalla los valores actuales almacenados en la matriz
+		System.out.println("\nMatriz actual: ");
+		mostrarMatriz(matriz);
+		
+		// Incrementamos en una unidad los elementos de la diagonal principal
+		for (int i=0; i<matriz.length; i++) {
+			matriz[i][i]++;
+		}
+		
+		// Mostramos la diagonal principal
+		System.out.println("\nDiagonal principal: ");
+		for (int i=0; i<matriz.length; i++) {
+			System.out.print(matriz[i][i]+" ");
+		}
+	}
+
+}

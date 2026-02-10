@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Ejercicio13.java&apos; to &apos;Unidad_Trabajo_3/src/ejemplos.tareasbucles&apos;&#x0D;&#x0A;- Original project: &apos;Unidad_Trabajo_3&apos;&#x0D;&#x0A;- Destination element: &apos;Unidad_Trabajo_3/src/ejemplos.tareasbucles&apos;&#x0D;&#x0A;- Original element: &apos;ejemplos.tareasbucles.Ejercicio13.java&apos;" description="Copy compilation unit" destination="/src&lt;ejemplos.tareasbucles" element1="/src&lt;ejemplos.tareasbucles{Ejercicio13.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1762243862513" units="1" version="1.0"/>
+</session>

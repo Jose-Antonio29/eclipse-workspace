@@ -1,0 +1,26 @@
+package strings;
+
+import java.util.Scanner;
+
+public class EjercicioString4 {
+
+	public static void main(String[] args) {
+		// Pedimos al usuario una cadena y una subcadena
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduce una cadena: ");
+		String cad1 = sc.nextLine();
+		System.out.print("Elige una palabra de tu cadena original: ");
+		String cad2 = sc.nextLine();
+		sc.close();
+		
+		// Comprobamos si la subcadena está en cad1 y modificamos el valor
+		cad1 = cad1.replaceAll(cad1, cad2.toUpperCase());
+		
+		// Mostramos por pantalla la cadena
+		System.out.println(cad1);
+		
+		
+
+	}
+
+}

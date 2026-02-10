@@ -1,0 +1,17 @@
+package strings;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+		// trim()
+		String nombre = new String("   Harry Potter   ");
+		System.out.println(nombre.trim());
+		System.out.println(nombre);
+		nombre=nombre.trim();
+		
+		// replace()
+		nombre.replace('e', 'x');
+
+	}
+
+}

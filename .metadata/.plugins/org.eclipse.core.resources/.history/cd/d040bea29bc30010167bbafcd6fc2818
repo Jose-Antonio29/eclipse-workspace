@@ -1,0 +1,21 @@
+package boletin;
+
+public class Ejer1 {
+	
+	/**
+	 * Función que devuelve un número aleatorio entre 1 y 50
+	 * @return
+	 */
+	public static int random() {
+		return (int)(Math.random()*50+1);
+	}
+
+	public static void main(String[] args) {
+		// Mostramos 5 números aleatorios entre 1 y 50
+		for (int i=1; i<=5; i++) {
+			System.out.println(random());
+		}
+
+	}
+
+}

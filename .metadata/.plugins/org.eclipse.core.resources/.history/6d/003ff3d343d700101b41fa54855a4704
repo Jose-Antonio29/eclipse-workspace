@@ -1,0 +1,59 @@
+package ejemplos.fecha;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Fecha_Test {
+
+	public static void main(String[] args) {
+		// Creamos el scanner
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			// Creamos un objeto Fecha
+			Fecha fecha = new Fecha();
+			
+			// Pedimos la fecha
+			System.out.println("Dime la fecha...");
+			System.out.print("Día: ");
+			fecha.setDay(sc.nextInt());
+			
+			System.out.print("Mes: ");
+			fecha.setMonth(sc.nextInt());
+			
+			System.out.print("Año: ");
+			fecha.setYear(sc.nextInt());
+			
+			// Comprobamos si la fecha es válida
+			if (fecha.isValid()) {
+				System.out.println("\nFecha introducida: "+fecha.toString());
+				
+				// Sumamos un día a la fecha introducida y la mostramos por pantalla			
+				fecha.setDay(fecha.getDay()+1);
+				
+				if (!fecha.isValid()) {
+					fecha.setMonth(fecha.getMonth()+1);
+					fecha.setDay(1);
+					if (fecha.getMonth()>12) {
+						fecha.setYear(fecha.getYear()+1);
+						if (fecha.getYear()==0) {
+							fecha.setYear(1);
+						}
+						fecha.setMonth(1);
+					}
+				}
+				
+				System.out.println("La fecha más 1 día: "+fecha.toString());
+			} else {
+				System.out.println("\nLa fecha introducida no es válida.");
+			}
+			
+		} catch (InputMismatchException ime) {
+			System.err.println(">> ERROR: El tipo de datos introducido no es correcto.");
+		} finally {
+			sc.close();
+		}
+
+	}
+
+}

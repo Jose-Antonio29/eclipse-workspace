@@ -1,0 +1,49 @@
+package matrices.ejemplos;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class EjMatriz04 {
+	
+	/**
+	 * Procedimiento que muestra por pantalla los valores almacenados en una matriz
+	 * @param M - Una matriz de números enteros
+	 */
+	public static void mostrarMatriz (int[][] M) {
+		for (int i=0; i<M.length; i++) {
+			for (int j=0; j<M[i].length; j++) {
+				System.out.print(M[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	final static int TAM = 3;
+
+	public static void main(String[] args) {
+		int[][] matriz = new int[TAM][TAM];
+		
+		// Leemos y almacenamos los valores de matriz
+		Scanner sc = new Scanner(System.in);
+		try {
+			System.out.println("Introduce los valores de la matriz: ");
+			for (int i=0; i<matriz.length; i++) {
+				for (int j=0; j<matriz[0].length; j++) {
+					System.out.print("Matriz ["+i+"]["+j+"]: ");
+					matriz[i][j]=sc.nextInt();
+				}
+			}
+			
+		} catch (InputMismatchException ime) {
+			System.err.println(">> ERROR: El tipo de datos introducido no es correcto.");
+		} finally {
+			sc.close();
+		}
+		
+		// Mostramos los valores de la matriz que han sido introducidos por el usuario
+		System.out.println("Valores de la matriz: ");
+		mostrarMatriz(matriz);
+
+	}
+
+}

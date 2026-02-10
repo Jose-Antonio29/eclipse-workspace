@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Tabla_de_multiplicar.java&apos; to &apos;Unidad_Trabajo_3/src/ejemplos.bucles&apos;&#x0D;&#x0A;- Original project: &apos;Unidad_Trabajo_1&apos;&#x0D;&#x0A;- Destination element: &apos;Unidad_Trabajo_3/src/ejemplos.bucles&apos;&#x0D;&#x0A;- Original element: &apos;ejemplos.Tabla_de_multiplicar.java&apos;" description="Copy compilation unit" destination="=Unidad_Trabajo_3/src&lt;ejemplos.bucles" element1="/src&lt;ejemplos{Tabla_de_multiplicar.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1760953257386" units="1" version="1.0"/>
+</session>

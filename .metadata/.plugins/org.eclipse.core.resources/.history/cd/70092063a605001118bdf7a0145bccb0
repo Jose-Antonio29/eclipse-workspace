@@ -1,0 +1,23 @@
+package strings;
+
+import java.util.Scanner;
+
+public class EjercicioString3 {
+
+	public static void main(String[] args) {
+		// Pedimos al usuario una cadena y una subcadena
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduce la cadena: ");
+		String cadenaOriginal = sc.nextLine();
+		System.out.print("¿Qué quieres buscar?: ");
+		String subcadena = sc.nextLine();
+		sc.close();
+		
+		// Comprobamos cuantas veces aparece la subacadena dentro de la cadena original
+		
+		
+		
+
+	}
+
+}
