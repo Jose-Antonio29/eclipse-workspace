@@ -1,0 +1,24 @@
+package repaso;
+
+import java.util.Scanner;
+
+public class Names {
+
+	final static int TAM=5;  // Número de elementos del vector
+
+	public static void main(String[] args) {
+		String[] A = new String[TAM];
+
+		// Pedimos 5 nombres y los almacenamos en A
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduce 5 números:");
+
+		for (int i=0; i<A.length; i++) {
+			System.out.print("Valor ["+(i+1)+"]: ");
+			A[i]=sc.nextLine();
+		}	
+
+
+	}
+
+}

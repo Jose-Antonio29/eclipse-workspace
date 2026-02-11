@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;repaso.RepasoArray&apos; to &apos;Numbers&apos;&#x0D;&#x0A;- Original project: &apos;Unidad_Trabajo_5&apos;&#x0D;&#x0A;- Original element: &apos;repaso.RepasoArray&apos;&#x0D;&#x0A;- Renamed element: &apos;repaso.Numbers&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;RepasoArray&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;repaso{RepasoArray.java[RepasoArray" matchStrategy="1" name="Numbers" qualified="false" references="true" similarDeclarations="false" stamp="1770798241245" textual="false" version="1.0"/>
+</session>

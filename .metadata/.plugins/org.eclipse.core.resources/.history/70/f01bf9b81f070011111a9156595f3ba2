@@ -1,0 +1,153 @@
+package repaso;
+
+import java.util.Scanner;
+
+public class MiNombre {
+
+	/**
+	 * Procedimiento que invierte una cadena de caracteres, es decir, del último al primer carácter
+	 * @param s - Cadena a invertir
+	 */
+	private static String invertir (String s) {
+		return new StringBuffer(s).reverse().toString();		
+	}
+
+
+	/**
+	 * Devuelve el número de vocales que contiene la cadena pasada como parámetro
+	 * @param s (String)
+	 * @return Número de vocales en la cadena
+	 */
+	private static int contarVocales (String s) {
+		int conta=0;
+		char c;
+		for (int i=0; i<s.length(); i++) {
+			c=s.toLowerCase().charAt(i);
+			if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u' ||
+				c=='á' || c=='é' || c=='í' || c=='ó' || c=='ú' ) {
+				conta++;
+			}	
+		}		
+		return conta;
+	}
+
+
+	/**
+	 * Devuelve las vocales de la cadena pasada como parámetro
+	 * @param s (String)
+	 * @return Cadena que contiene únicamente las vocales de la cadena pasada como parámetro
+	 */
+	private static String vocales (String s) {
+		String result="";
+		char c;
+		for (int i=0; i<s.length(); i++) {
+			c=s.charAt(i);			
+			if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u' ||
+				c=='A' || c=='E' || c=='I' || c=='O' || c=='U' ||
+				c=='á' || c=='é' || c=='í' || c=='ó' || c=='ú' ||
+				c=='Á' || c=='É' || c=='Í' || c=='Ó' || c=='Ú') {
+				result+=c;
+			}		
+		}
+		return result;
+	}
+	
+	/**
+	 * Devuelve las consonantes de la cadena pasada como parámetro
+	 * @param s (String)
+	 * @return Cadena (String) que contiene únicamente las consonantes de la cadena pasada como parámetro
+	 */
+	private static String consonantes (String s) {
+		String result="";
+		char c;
+		for (int i=0; i<s.length(); i++) {
+			c=s.charAt(i);
+			if (c >= 'b' && c <='z') {
+				if (c!='e' && c!='i' && c!='o' && c!='u') {
+					result+=c;
+				}
+			}
+			if (c >= 'B' && c <='Z') {
+				if (c!='E' && c!='I' && c!='O' && c!='U') {
+					result+=c;
+				}
+			}
+		}
+		return result;
+	}
+	
+	/**
+	 * Devuelve el número de consonantes contenidos en una cadena pasada como parámetro
+	 * @param s (String)
+	 * @return Número de consonantes en la cadena
+	 */
+	private static int contarConsonantes (String s) {
+		int conta=0;
+		char c;
+		for (int i=0; i<s.length(); i++) {
+			c=s.toLowerCase().charAt(i);
+			if (c >= 'b' && c <='z') {
+				if (c!='e' && c!='i' && c!='o' && c!='u') {
+					conta++;
+				}
+			}
+		}
+		return conta;
+	}
+
+	/**
+	 * Elimina un carácter de una cadena pasada como parámetro
+	 * @param s (String) - Cadena de caracteres original
+	 * @param c (Char) - Carácter a eliminar
+	 * @return Una cadena nueva sin el carácter elegido
+	 */
+	private static String eliminarChar (String s, char c) {
+		String result="";
+		for (int i=0; i<s.length(); i++) {
+			if (s.charAt(i)!=c) {
+				result+=s.charAt(i);
+			}
+		}
+		return result;
+	}
+
+	// Programa principal
+	public static void main(String[] args) {
+		// Pedimos al usuario que introduzca su nombre
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduce tu nombre: ");
+		String nombre = sc.nextLine();
+
+		// Imprimir nombre
+		System.out.println("Nombre: "+nombre);
+
+		// En mayúsculas
+		System.out.println("En mayúsculas: "+nombre.toUpperCase());
+
+		// En minúsculas
+		System.out.println("En minúsculas: "+nombre.toLowerCase());
+
+		// Invertido
+		System.out.print("Invertido: "+invertir(nombre));
+
+		// Imprimir vocales
+		System.out.println("\nVocales: "+vocales(nombre));
+		
+		// Número de vocales
+		System.out.println("Nº Vocales: "+contarVocales(nombre));
+		
+		// Imprimir consonantes
+		System.out.println("Consonantes: "+consonantes(nombre));
+		
+		// Número de consonantes
+		System.out.println("Nº consonantes: "+contarConsonantes(nombre));
+		
+		// Eliminar un carácter
+		System.out.print("\nDime un carácter a eliminar: ");
+		char c = sc.nextLine().charAt(0);
+		System.out.println("Nombre sin '"+c+"': "+eliminarChar(nombre,c));
+
+		sc.close();
+	}
+
+}

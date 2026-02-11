@@ -12,7 +12,7 @@ public class MiNombre {
 		return new StringBuffer(s).reverse().toString();		
 	}
 
-
+	
 	/**
 	 * Devuelve el número de vocales que contiene la cadena pasada como parámetro
 	 * @param s (String)
@@ -31,7 +31,7 @@ public class MiNombre {
 		return conta;
 	}
 
-
+	
 	/**
 	 * Devuelve las vocales de la cadena pasada como parámetro
 	 * @param s (String)
@@ -51,6 +51,7 @@ public class MiNombre {
 		}
 		return result;
 	}
+	
 	
 	/**
 	 * Devuelve las consonantes de la cadena pasada como parámetro
@@ -76,6 +77,7 @@ public class MiNombre {
 		return result;
 	}
 	
+	
 	/**
 	 * Devuelve el número de consonantes contenidos en una cadena pasada como parámetro
 	 * @param s (String)
@@ -95,14 +97,30 @@ public class MiNombre {
 		return conta;
 	}
 
+	
+	/**
+	 * Elimina un carácter de una cadena pasada como parámetro
+	 * @param s (String) - Cadena de caracteres original
+	 * @param c (Char) - Carácter a eliminar
+	 * @return Una cadena nueva sin el carácter elegido
+	 */
+	private static String eliminarChar (String s, char c) {
+		String result="";
+		for (int i=0; i<s.length(); i++) {
+			if (s.charAt(i)!=c) {
+				result+=s.charAt(i);
+			}
+		}
+		return result;
+	}
 
+	
 	// Programa principal
 	public static void main(String[] args) {
 		// Pedimos al usuario que introduzca su nombre
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Introduce tu nombre: ");
 		String nombre = sc.nextLine();
-		sc.close();
 
 		// Imprimir nombre
 		System.out.println("Nombre: "+nombre);
@@ -127,7 +145,13 @@ public class MiNombre {
 		
 		// Número de consonantes
 		System.out.println("Nº consonantes: "+contarConsonantes(nombre));
+		
+		// Eliminar un carácter
+		System.out.print("\nDime un carácter a eliminar: ");
+		char c = sc.nextLine().charAt(0);
+		System.out.println("Nombre sin '"+c+"': "+eliminarChar(nombre,c));
 
+		sc.close();
 	}
 
 }
