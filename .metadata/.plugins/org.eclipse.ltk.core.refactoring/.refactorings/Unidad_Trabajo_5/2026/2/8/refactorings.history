@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 3 elements to &apos;Unidad_Trabajo_5/src/colecciones.conjuntos&apos;&#x0D;&#x0A;- Original project: &apos;Unidad_Trabajo_5&apos;&#x0D;&#x0A;- Destination element: &apos;Unidad_Trabajo_5/src/colecciones.conjuntos&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     colecciones.SetString.java&#x0D;&#x0A;     colecciones.Set01.java&#x0D;&#x0A;     colecciones.SetNumbers.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;colecciones.conjuntos" element1="/src&lt;colecciones{SetString.java" element2="/src&lt;colecciones{Set01.java" element3="/src&lt;colecciones{SetNumbers.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1771589318903" units="3" version="1.0"/>
+</session>

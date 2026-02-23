@@ -1,0 +1,36 @@
+package colecciones;
+
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetString {
+
+	public static void main(String[] args) {
+		// Creamos un conjunto de números (escritos como una cadena de caracteres)
+		Set<String> numberSet = new TreeSet<String>();
+		
+		// Insertamos elementos en el conjunto
+		numberSet.add("Uno");
+		numberSet.add("Dos");
+		numberSet.add("Tres");
+		numberSet.add("Uno");
+		numberSet.add("Cuatro");
+		numberSet.add("Dos");
+		
+		System.out.println("Conjunto: "+numberSet.toString());
+		System.out.println("Tamaño: "+numberSet.size());
+		
+		if (numberSet.add("Tres")) {
+			System.out.println("Se ha insertado correctamente");
+		} else {
+			System.out.println("Error al insertar");
+		}
+		
+		if (numberSet.contains("Tres")) {
+			System.out.println("El elemento 'Tres' ya está contenido en el conjunto");
+		}
+
+	}
+
+}
