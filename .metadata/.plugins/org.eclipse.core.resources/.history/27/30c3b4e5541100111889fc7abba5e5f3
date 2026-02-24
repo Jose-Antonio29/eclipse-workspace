@@ -1,0 +1,26 @@
+package colecciones.listas;
+
+import java.util.ArrayList;
+
+public class ArrayList02 {
+
+	public static void main(String[] args) {
+		// Creamos una lista de números enteros
+		ArrayList<Integer> lista = new ArrayList<Integer>();
+		
+		// Añadimos 6 valores a la lista
+		lista.add(1);
+		lista.add(5);
+		lista.add(7);
+		lista.add(1);
+		lista.add(14);
+		lista.add(21);
+		lista.add(13);
+		
+		// Mostramos la lista de valores
+		System.out.println("Lista: "+lista);
+		
+
+	}
+
+}

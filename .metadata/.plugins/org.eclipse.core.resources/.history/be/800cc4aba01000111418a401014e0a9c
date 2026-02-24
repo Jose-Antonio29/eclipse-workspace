@@ -1,0 +1,25 @@
+package boletin;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		// Pedimos al usuario queintroduzca palabras hasta que introduzca "FIN"
+		Scanner sc = new Scanner(System.in);
+		int conta=1;
+		String cad="";
+		String terminar = "FIN";
+		System.out.println("Introduce palabras ('FIN' para terminar)...");
+		do {
+			System.out.print("Palabra "+conta+": ");
+			cad+=sc.nextLine()+" ";
+			conta++;
+		} while (cad!=terminar);
+		sc.close();
+		
+		// Mostramos la frase por pantalla
+		System.out.println("> Frase: "+cad);
+	}
+
+}

@@ -1,0 +1,27 @@
+package boletin;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		// Pedimos una frase al usuario
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduce una frase: ");
+		String frase = sc.nextLine();
+		sc.close();
+
+		// Separamos las palabras de la frase (por cada espacio)
+		String aux="";
+		int inicio=0;
+		for (int i=0; i<frase.length(); i++) {
+			if (frase.charAt(inicio)!=' ') {
+				aux+=frase.charAt(inicio);
+				System.out.println("Palabra "+(i+1)+": "+aux);
+			}
+			inicio++;
+			aux="";
+		}
+	}
+
+}

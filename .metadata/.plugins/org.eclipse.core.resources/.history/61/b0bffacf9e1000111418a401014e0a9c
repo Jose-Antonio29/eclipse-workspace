@@ -1,0 +1,59 @@
+package boletin;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		// Pedimos al usuario que introduzca un número positivo
+		Scanner sc = new Scanner(System.in);
+		int num;
+		String n;
+		try {
+			System.out.print("Dime un número: ");
+			num = sc.nextInt();
+			n = String.valueOf(num);
+
+
+			// Comprobamos si el número introducido es válido
+			if (n.length()<2 && num>0) {
+				System.out.println("> El número "+num+" NO es capicúa");
+				System.out.println("> Debe tener, al menos, dos dígitos");
+			} else if (num<=0) {
+				System.out.println("> Debes introducir un número entero positivo");
+			} else {
+
+				// Si es válido comprobamos si es capicúa o no
+				boolean esCapicua = false;
+				for (int i=0; i<n.length()-1; i++) {
+					for (int j=n.length(); j>i; j--) {
+						if (n.charAt(i)==n.charAt(j)) {
+							esCapicua=true;
+						}
+					}
+				}
+
+
+				// Mostramos el resultado por pantalla
+				if (esCapicua) {
+					System.out.println("El número "+num+" es capicúa");
+				} else {
+					System.out.println("> El número "+num+" NO es capicúa");
+				}
+			}
+		} catch (InputMismatchException ime) {
+			System.out.println("> ERROR en la introducción de datos");
+			System.out.println("> El programa finalizará");
+		} finally {
+			sc.close();
+		}
+
+
+
+
+
+
+	}
+
+}
