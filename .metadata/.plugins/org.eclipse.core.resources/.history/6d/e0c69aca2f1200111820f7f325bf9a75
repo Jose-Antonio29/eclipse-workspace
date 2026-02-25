@@ -1,0 +1,22 @@
+package colecciones.mapas;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Mapa01 {
+
+	public static void main(String[] args) {
+		// Creamos el mapa
+		Map<Integer,String> ciudades = new HashMap<Integer,String>();
+		
+		// Insertamos elementos 
+		ciudades.put(30500, "Molina de Segura");
+		ciudades.put(30560, "Alguazas");
+		ciudades.put(30565, "Las Torres de Cotillas");
+		ciudades.put(30600, "Archena");
+		ciudades.put(30820, "Alcantarilla");
+		
+
+	}
+
+}

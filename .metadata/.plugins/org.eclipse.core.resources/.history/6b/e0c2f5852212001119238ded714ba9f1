@@ -1,0 +1,54 @@
+package colecciones.conjuntos;
+
+import java.util.HashSet;
+import java.util.InputMismatchException;
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.Set;
+
+public class SetNumbers {
+
+	public static void main(String[] args) {
+		// Creamos un conjunto de números enteros
+		Set<Integer> numberSet = new HashSet<Integer>();
+		
+		// Leemos por teclado números enteros hasta que el usuario introduzca el 0(cero)
+		// y los almacenammos en el conjunto
+		
+		Scanner sc = new Scanner(System.in);
+		
+		try {
+			System.out.println("Introduzca un conjunto de números, para finalizar introduzca el 0");
+			Integer num; // El número introducido por el usuario
+			
+			do {
+				System.out.print("\nIntroduzca un valor: ");
+				num = sc.nextInt();
+				
+				if (num!=0) {
+					if (num<0) {
+						System.out.println("No se pueden introducir números negativos");
+					} else if (!numberSet.add(num)) {
+						System.out.println("Este valor ya está almacenado en el conjunto");
+					} else
+						numberSet.add(num);
+				}
+				
+			} while (num!=0);
+			
+		} catch(InputMismatchException ime) {
+			System.out.println(">> ERROR: El tipo de datos introducido no es correcto");
+		} finally {
+			sc.close();
+		}
+		
+		// Mostramos el conjunto de valores
+		System.out.println("\nConjunto: "+numberSet.toString());
+		System.out.println("Tamaño: "+numberSet.size());
+		System.out.print("Conjunto (Iterator): ");
+		Iterator<Integer> SetIterator = numberSet.iterator();
+		while (SetIterator.hasNext()) {
+			System.out.print(SetIterator.next()+" ");
+		}
+	}
+}

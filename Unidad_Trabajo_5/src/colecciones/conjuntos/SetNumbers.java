@@ -2,6 +2,7 @@ package colecciones.conjuntos;
 
 import java.util.HashSet;
 import java.util.InputMismatchException;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -44,5 +45,20 @@ public class SetNumbers {
 		// Mostramos el conjunto de valores
 		System.out.println("\nConjunto: "+numberSet.toString());
 		System.out.println("Tamaño: "+numberSet.size());
+		System.out.print("Conjunto (Iterator): ");
+		Iterator<Integer> i = numberSet.iterator();
+		while (i.hasNext()) {
+			System.out.print(i.next()+" ");
+		}
+		
+		// Recorrer el conjunto elemento a elemento para visulizar los valores pares
+		Iterator<Integer> j = numberSet.iterator();
+		System.out.print("\n> Pares: ");
+		Integer next;
+		while (j.hasNext()) {
+			next=j.next();
+			if (next%2==0) 
+				System.out.print(next+" ");
+		}
 	}
 }

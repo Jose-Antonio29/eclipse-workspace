@@ -2,9 +2,21 @@ package colecciones.listas;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class ArrayList03 {
+	
+	/**
+	 * Muestra por pantalla los elementos  almacenados en una lista de números enteros
+	 * @param l - Una lista de números enteros
+	 */
+	private static void printList(ArrayList<Integer> l) {
+		Iterator<Integer> i = l.iterator();
+		while (i.hasNext()) {
+			System.out.print(i.next()+" ");
+		}
+	}
 
 	public static void main(String[] args) {
 		// Creamos una lista de números enteros
@@ -34,9 +46,11 @@ public class ArrayList03 {
 		
 		// Mostramos el tamaño y los elementos de la lista por pantalla
 		System.out.println("\n> Número de valores introducidos: "+lista.size());
-		System.out.println("\n> Lista: "+lista);
+		System.out.print("> Lista: ");
+		printList(lista);
 		lista.sort(null);
-		System.out.println("\n> Lista: "+lista);
+		System.out.print("\n> Lista ordenada: ");
+		printList(lista);
 	}
 
 }
