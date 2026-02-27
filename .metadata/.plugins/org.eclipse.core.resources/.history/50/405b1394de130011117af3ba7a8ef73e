@@ -1,0 +1,73 @@
+package colecciones.mapas;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class Map02 {
+
+	public static void main(String[] args) {
+		// Declaramos el Map
+		// Clave --> Nombre del alumno (String)
+		// Value --> Nota final (Double)
+		Map<String, Double> notas = new HashMap<String, Double>();
+
+		// Añadimos alumnos y notas
+		notas.put("Miguel", 7.25);
+		notas.put("Ana", 8.5);
+		notas.put("Pedro", 9.1);
+		notas.put("María", 6.2);
+		notas.put("Elena", 5.25);
+		notas.put("Pablo", 4.45);
+
+		// 1) Mostramos todas las notas
+		System.out.println("=== LISTADO DE NOTAS ===");
+
+		// a) Obtenemos el Iterator sobre las entradas del Map
+		Iterator<Entry<String, Double>> i = notas.entrySet().iterator();
+
+		// b) Recorremos con while
+		while (i.hasNext()) {
+			Entry<String, Double> elemento = i.next();
+			System.out.println("Alumno: "+elemento.getKey()+" | Nota: "+elemento.getValue());
+		}
+
+		// 2) Calculamos la nota media
+		double suma = 0;
+		Iterator<Double> j = notas.values().iterator();
+		while (j.hasNext()) {
+			suma+=j.next();
+		}
+		System.out.println("\n> Nota media del grupo: "+(suma/notas.size()));
+
+		// 3) Buscamos al alumno con la mayor nota
+
+		// a) Obtenemos el Iterator sobre las entradas del Map
+		Iterator<Entry<String,Double>> k = notas.entrySet().iterator();
+		Entry<String, Double> primerAlum = k.next();
+		double mejorNota = primerAlum.getValue();
+		String mejorAlum = primerAlum.getKey();
+
+		// b) Recorremos con while
+		while (k.hasNext()) {
+			Entry<String, Double> siguienteAlum = k.next();
+			if (siguienteAlum.getValue()>mejorNota) {
+				mejorNota = siguienteAlum.getValue();
+				mejorAlum = siguienteAlum.getKey();
+			}
+		}
+		System.out.println("\nAlumno con mayor nota: "+mejorAlum+" con un "+mejorNota);
+
+		// 4) Modificamos la nota de Lola, y la subimos un punto
+		String nombre = "Lola";
+		if (notas.containsKey(nombre)) {
+			System.out.println("\nActualizando nota de "+nombre+"...");
+			notas.put(nombre, notas.get(nombre)+1);
+			System.out.println("Nueva nota de "+nombre+": "+notas.get(nombre));
+		} else {
+			System.out.println(nombre+" no existe");
+		}
+
+	}
+}
