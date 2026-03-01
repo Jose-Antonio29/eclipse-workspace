@@ -1,0 +1,29 @@
+package colecciones.mapas;
+
+import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+
+public class Nombres_Iniciales {
+
+	final static int CANT = 3;
+
+	public static void main(String[] args) {
+		// Pedimos al usuario que introduzca su nombre y dos apellidos
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduzca "+CANT+" nombres y "+CANT+" apellidos...");
+		int conta=0;
+		while (conta<CANT) {
+			System.out.print("Nombre: ");
+			String nom = sc.nextLine();
+			System.out.print("Apellido: ");
+			String apell = sc.nextLine();
+			String iniciales = ""+nom.toUpperCase().charAt(0)+apell.toUpperCase().charAt(0);
+			Map<String,String> registroAlumnos = new HashMap<String,String>();
+			registroAlumnos.put(nom, iniciales);
+		}
+		sc.close();
+
+	}
+
+}
