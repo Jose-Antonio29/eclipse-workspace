@@ -24,7 +24,7 @@ public class Nombres_Iniciales_Mejorado {
 			System.out.println();
 			if (nomCompleto.split(" ").length>1) {
 				for (int j=0; j<nomCompleto.split(" ").length; j++) 
-					iniciales += nomCompleto.split(" ")[j].charAt(0);
+					iniciales += nomCompleto.split(" ")[j].charAt(0)+".";
 			}else {
 				iniciales = ""+nomCompleto.charAt(0);
 			}
